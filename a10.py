@@ -15,9 +15,9 @@ def editDistance(s, t):
                 dp[i][j] = dp[i - 1][j - 1]
             else:
                 dp[i][j] = 1 + min(
-                    dp[i - 1][j],     # Remove
-                    dp[i][j - 1],     # Insert
-                    dp[i - 1][j - 1]  # Replace
+                    dp[i - 1][j],     
+                    dp[i][j - 1],     
+                    dp[i - 1][j - 1]  
                 )
 
     return dp[m][n]
